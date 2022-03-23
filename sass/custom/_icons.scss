@@ -1,0 +1,44 @@
+// To add new icons for use, copy the SVG file into "source/images/mdi",
+// then add the file name to the `$icons` list below.
+
+$icons:
+  'arrow-right',
+  'cogs',
+  'forum',
+  'home-lightning-bolt-outline',
+  'lightbulb-variant-outline',
+  'magnify',
+  'message',
+  'note-edit-outline',
+  'puzzle',
+  'shield-half-full',
+  'tablet-cellphone';
+
+// Do not edit below this line.
+
+[class^="mdi-"],
+[class*=" mdi-"] {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+
+  &:before {
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    text-decoration: inherit;
+    width: 100%;
+  }
+}
+
+@each $icon in $icons {
+  .mdi-#{$icon}:before { background: inline_svg_image('/mdi/#{$icon}.svg'); }
+}
+
+// @each $icon in list_files('/images/mdi/*') {
+//   .mdi-#{$icon}:before { background: inline_svg_image('/mdi/#{$icon}.svg'); }
+// }

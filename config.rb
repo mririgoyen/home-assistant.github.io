@@ -1,4 +1,6 @@
 require 'sass-globbing'
+require File.join(File.dirname(__FILE__), 'plugins/list_files.rb')
+require File.join(File.dirname(__FILE__), 'plugins/inline_svg_image.rb')
 
 # Require any additional compass plugins here.
 project_type = :stand_alone
